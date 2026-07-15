@@ -1,0 +1,215 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
+body {
+    line-height: 1.7;
+    color: #1d1d1f;
+    background-color: #f5f5f7;
+    margin: 0;
+    padding: 32px;
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    color: #1d1d1f;
+    font-size: 36px;
+    padding-bottom: 16px;
+    /* border-bottom: 1px solid #d2d2d7; */
+    text-align: center;
+}
+
+h2 {
+    color: #424245;
+    font-size: 24px;
+    padding-left: 12px;
+    border-left: 4px solid #0071e3;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #004c99;
+    text-decoration: underline;
+}
+
+.main-nav {
+    text-align: center;
+}
+
+.main-nav a {
+    display: inline-block;
+    margin: 0;
+    padding: 4px 12px;
+}
+
+.main-nav a + a {
+    border-left: 1px solid #d2d2d7;
+}
+
+.section-divider {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #d2d2d7;
+}
+
+.pink-mark {
+    background: linear-gradient(
+        transparent 10%, 
+        pink 90%
+    );
+    color: inherit;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 18px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.trip-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    padding: 12px;
+    margin: 24px 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.trip-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.table-wrap {
+    margin-top: 24px;
+    overflow-x: auto;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #d2d2d7;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 14px 16px;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+}
+
+.schedule-table th {
+    color: #ffffff;
+    background-color: #0071e3;
+}
+
+.schedule-table tbody td:hover {
+    background-color: #f5f5f7;
+}
+
+.schedule-table td:first-child {
+    color: #6e6e73;
+    white-space: nowrap;
+}
+
+.lunch-row {
+    color: #6e6e73;
+    background-color: #fff8e6;
+}
+
+.signup-form fieldset {
+    margin: 24px 0;
+    padding: 24px;
+    background-color: #fbfbfd;
+    border: 1px solid #d2d2d7;
+    border-radius: 14px;
+}
+
+.signup-form legend {
+    padding: 0 8px;
+    color: #1d1d1f;
+    font-weight: 600;
+}
+
+.signup-form p {
+    margin: 16px 0;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="tel"],
+.signup-form input[type="date"],
+.signup-form select,
+.signup-form textarea {
+    width: 100%;
+    max-width: 460px;
+    padding: 12px 14px;
+    color: #1d1d1f;
+    background-color: #ffffff;
+    border: 1px solid #d2d2d7;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+.signup-form textarea {
+    max-width: 100%;
+    resize: vertical;
+}
+
+.signup-form input:focus,
+.signup-form select:focus,
+.signup-form textarea:focus {
+    border-color: #0071e3;
+    outline: 3px solid rgba(0, 113, 227, 0.15);
+}
+
+.signup-form input[type="radio"],
+.signup-form input[type="checkbox"] {
+    margin-right: 6px;
+    accent-color: #0071e3;
+}
+
+.signup-form .btn-submit,
+.signup-form .btn-reset {
+    min-width: 120px;
+    margin: 20px 4px 0;
+    padding: 12px 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.signup-form .btn-submit {
+    color: #ffffff;
+    background-color: #0071e3;
+}
+
+.signup-form .btn-submit:hover {
+    background-color: #0062c4;
+}
+
+.signup-form .btn-reset {
+    color: #1d1d1f;
+    background-color: #f5f5f7;
+    border-color: #d2d2d7;
+}
+
+.signup-form .btn-reset:hover {
+    background-color: #e8e8ed;
+}
