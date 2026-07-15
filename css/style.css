@@ -213,3 +213,21 @@ a:hover {
 .signup-form .btn-reset:hover {
     background-color: #e8e8ed;
 }
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 16px 32px;
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 1000;
+}
+
+.signup-page {
+    padding-top: 180px;
+}
