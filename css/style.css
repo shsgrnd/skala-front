@@ -39,12 +39,24 @@ a:hover {
 
 .main-nav {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .main-nav a {
     display: inline-block;
     margin: 0;
     padding: 4px 12px;
+    transition:
+        color 0.25s ease, 
+        background-color 0.25s ease;
+}
+
+.main-nav a:hover {
+    color: white;
+    background-color: #0071e3;
 }
 
 .main-nav a + a {
@@ -57,12 +69,12 @@ a:hover {
     border-bottom: 1px solid #d2d2d7;
 }
 
-.pink-mark {
+.blue-mark {
     background: linear-gradient(
-        transparent 10%, 
-        pink 90%
+        transparent 5%, 
+        #0071e3 100%
     );
-    color: inherit;
+    color: #ffffff;
 }
 
 .container {
@@ -83,6 +95,15 @@ a:hover {
     padding: 12px;
     margin: 24px 0;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
 }
 
 .trip-card img {
@@ -198,20 +219,28 @@ a:hover {
 .signup-form .btn-submit {
     color: #ffffff;
     background-color: #0071e3;
+    transition: 
+        background-color 0.25s ease, 
+        transform 0.25s ease;
 }
 
 .signup-form .btn-submit:hover {
     background-color: #0062c4;
+    transform: translateY(-2px);
 }
 
 .signup-form .btn-reset {
     color: #1d1d1f;
     background-color: #f5f5f7;
     border-color: #d2d2d7;
+    transition: 
+        background-color 0.25s ease, 
+        transform 0.25s ease;
 }
 
 .signup-form .btn-reset:hover {
     background-color: #e8e8ed;
+    transform: translateY(-2px);
 }
 
 .fixed-header {
@@ -230,4 +259,79 @@ a:hover {
 
 .signup-page {
     padding-top: 180px;
+}
+
+.index-layout {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+.index-layout > main {
+    flex: 3;
+    min-width: 0;
+}
+
+.index-layout > aside {
+    flex: 1;
+    min-width: 0;
+}
+
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.trip-grid .trip-card {
+    margin: 0;
+}
+
+.trip-card figure {
+    margin: 0;
+}
+
+.trip-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+#spot,
+#vlog {
+    scroll-margin-top: 80px;
+}
+
+@media (max-width: 786px) {
+    .trip-grid {
+        grid-template-columns: 1fr;
+    }
+    .index-layout {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .index-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .index-nav a + a {
+        border-left: none;
+        border-top: 1px solid #d2d2d7;
+    }
+}
+
+.index-title {
+    animation: title-fade-in 0.8s ease-out both;
+}
+
+@keyframes title-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
