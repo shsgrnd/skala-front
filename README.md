@@ -1,11 +1,79 @@
-1. 각 과제의 실행 결과물 : result/
 
-2. 소스 코드 : 현 폴더
 
-3. 결과물에 대한 평가 및 실습 과제 이후 추가 과제
+## 프로젝트 구조
+
+HTML, CSS, JavaScript 기초 실습과 종합 과제 결과물을 정리한 프론트엔드 프로젝트입니다. 별도의 빌드 도구 없이 `templates/` 폴더의 HTML 파일을 브라우저에서 실행하는 정적 웹 프로젝트 구조입니다.
+
+```text
+skala-front/
+├── README.md
+├── css/
+│   ├── style.css          # 공통 페이지, 자기소개, 회원가입, 퀴즈 등 기본 스타일
+│   ├── trip.css           # 여행지 소개 페이지 전용 스타일
+│   ├── products.css       # 반응형 상품 카드 갤러리 스타일
+│   └── todo.css           # 할 일 관리 앱 스타일
+├── media/
+│   ├── 리장.jpg
+│   ├── 세부.jpg
+│   ├── 홋카이도.jpg
+│   ├── music.mp3
+│   └── video.mp4
+├── scripts/
+│   ├── app.js             # 할 일 관리 앱 UI, 필터, 오늘의 한마디 처리
+│   ├── storage.js         # 할 일 데이터 localStorage 저장/복원 모듈
+│   ├── productGallery.js  # 상품 갤러리 다크 모드 전환 및 테마 저장
+│   ├── quiz.js            # HTML/CSS/JavaScript 복습 퀴즈 로직
+│   ├── realtimeInfo.js    # 날씨 조회 UI와 weatherAPI 모듈 연동
+│   ├── weatherAPI.js      # 도시 좌표 및 날씨 API 요청 모듈
+│   ├── weather.js         # 날씨 조회 단일 스크립트 버전
+│   ├── upDown.js          # 업다운 숫자 맞히기 게임
+│   ├── grade.js           # 과목 점수 평균 및 등급 계산
+│   └── bag.js             # 가방 속 물건 출력 이벤트 실습
+├── templates/
+│   ├── index.html         # 메인 페이지 및 JavaScript 실습 진입점
+│   ├── 02_my_intro_page.html
+│   ├── 03_wrap_quiz.html
+│   ├── 04_signUp.html
+│   ├── signUpResult.html
+│   ├── myClass.html
+│   ├── myHoliday.html
+│   ├── myTrip.html
+│   ├── productGallery.html
+│   └── todo.html
+└── result/
+    ├── day1/
+    │   ├── assignments_image/             # Day 1 필수 과제 실행 결과
+    │   ├── additional_assignments_image/  # Day 1 추가 과제 실행 결과
+    │   └── final_image/                   # Day 1 최종 보완 결과
+    └── day2/
+        ├── assignments_image/             # Day 2 필수 과제 실행 결과
+        └── additional_assignments_image/  # Day 2 추가 과제 실행 결과
+```
+
+### 주요 구성
+
+- `templates/`: 각 실습 페이지의 HTML 파일이 모여 있는 폴더입니다.
+- `css/`: 공통 스타일과 페이지별 전용 스타일을 분리해 둔 폴더입니다.
+- `scripts/`: DOM 이벤트, 모듈, API 요청, localStorage, 퀴즈, 게임 등 JavaScript 실습 코드가 들어 있습니다.
+- `media/`: 여행지 페이지와 멀티미디어 실습에 사용하는 이미지, 오디오, 비디오 파일이 들어 있습니다.
+- `result/`: Day 1, Day 2 과제별 실행 결과 스크린샷을 보관하는 폴더입니다.
+
+
+## REPORT
+
+### 1. 각 과제의 실행 결과물
+: result/
+
+### 2. 소스 코드
+: Github 및 구글 드라이브 업로드
+
+### 3. 결과물에 대한 평가 
 : 
 
-4. Github 주소 : https://github.com/shsgrnd/skala-front
+### 4. 실습 과제 이후 추가 과제
+- 교재 속 실습 및 과제 모두 완료하고 캡쳐한 사진은 'result/day1/additional_assignments_image/'와 'result/day1/additional_assignments_image/'에 저장했습니다.
+
+### 5. Github 주소 : https://github.com/shsgrnd/skala-front
 
 ## 추가로 해야 할 일
 
