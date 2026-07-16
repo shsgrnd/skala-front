@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,17 +19,18 @@
                 <legend>계정 정보</legend>
                 <p>
                     <label for="userId">아이디 : </label>
-                    <input type="text" id="userId" name="userId"pattern="[A-Za-z0-9]{4,12}" title="영문과 숫자만 사용하여 4~12자로 입력하세요." required placeholder="4 - 12자 영문/숫자">
+                    <input type="text" id="userId" name="userId" pattern="[A-Za-z0-9]{4,12}" title="영문과 숫자만 사용하여 4~12자로 입력하세요." required placeholder="4 - 12자 영문/숫자">
                     <small>*</small>
                 </p>
                 <p>
                     <label for="userPwd">비밀번호 : </label>
-                    <input type="text" id="userPwd" name="userPwd" minlength="8" required placeholder="8자 이상 입력">
+                    <input type="password" id="userPwd" name="userPwd" minlength="8" required placeholder="8자 이상 입력">
                     <small>*</small>
                 </p>
                 <p>
                     <label for="userEmail">이메일 : </label>
-                    <input type="email" id="userEmail" name="userEmail" placeholder="hideonbush@faker.com">
+                    <input type="email" id="userEmail" name="userEmail" required placeholder="hideonbush@faker.com">
+                    <small>*</small>
                 </p>
             </fieldset>
 
@@ -46,7 +47,7 @@
                 </p>
                 <p>
                     <label for="phoneNum">전화번호 : </label>
-                    <input type="tel" name="phoneNum" id="phoneNum" pattern="010-[0-9]{4}-[0-9]{4}" title="영문과 숫자만 사용하여 4~12자로 입력하세요." placeholder="010-0000-0000">
+                    <input type="tel" name="phoneNum" id="phoneNum" pattern="010-[0-9]{4}-[0-9]{4}" title="010-0000-0000 형식으로 입력하세요." placeholder="010-0000-0000">
                 </p>
                 <p>
                     성별 : 
@@ -93,7 +94,7 @@
                 <p>
                     <label for="intro">본인을 표현하는 한마디</label>
                     <br>
-                    <textarea id="intro" name="intro" rows="6" cols="60" placeholder="자기소개를 입력하세요(최대 200자)"></textarea>
+                    <textarea id="intro" name="intro" rows="6" cols="60" maxlength="200" placeholder="자기소개를 입력하세요(최대 200자)"></textarea>
                 </p>
             </fieldset>
 

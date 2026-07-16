@@ -1,63 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myTrip</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <meta name="description" content="여행지의 명소, 먹거리, 영상과 여행 팁을 소개하는 페이지">
+    <meta name="author" content="신형섭">
+    <title>여행지 소개</title>
+    <link rel="stylesheet" href="../css/trip.css">
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>여행 일지</h1>
-            <audio controls>
-                <source src="../media/music.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </header>
-        <nav class="section-divider main-nav">
-            <a href="index.html">Home</a>
-            <a href="#spot">명소</a>
-            <a href="#vlog">Vlog</a>
-        </nav>
-        <main class="section-divider trip-grid" id="spot">
-            <article class="trip-card">
-                <figure>
-                    <figcaption>리장 호도협 (2025) </figcaption>
-                    <img src="../media/리장.jpg" alt="리장 호도협" width="400" height="200">
-                </figure>
-            </article>
-            <article class="trip-card">
-                <figure>
-                    <figcaption>세부 탑스힐 (2024)</figcaption>
-                    <img src="../media/세부.jpg" alt="세부 탑스힐" width="400" height="200">
-                </figure>
-                
-            </article>
-            <article class="trip-card">
-                <figure>
-                    <figcaption>훗카이도 대설산 (2025)</figcaption>
-                    <img src="../media/홋카이도.jpg" alt="훗카이도 대설산" width="400" height="200">
-                </figure>
-                
-            </article>
-        </main>
-        <h2>브이로그</h2>
-        <section id="vlog">
+<body class="trip-page" id="top">
+    <nav class="trip-nav" aria-label="여행지 페이지 메뉴">
+        <a class="trip-logo" href="#top">Travel Log</a>
+        <div class="trip-nav-links">
+            <a href="#about">소개</a>
+            <a href="#attractions">명소</a>
+            <a href="#food">먹거리</a>
+            <a href="#video">영상</a>
+            <a href="index.html">홈</a>
+        </div>
+    </nav>
+
+    <header class="trip-hero">
+        <div class="trip-hero-content">
+            <p class="trip-eyebrow">나만의 여행 기록</p>
+            <h1>다시 떠나고 싶은 여행지</h1>
+            <p>아름다운 풍경과 특별한 음식, 여행의 순간을 한곳에 담았습니다.</p>
+            <a class="trip-primary-link" href="#attractions">명소 둘러보기</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="trip-section trip-about" id="about">
+            <div class="trip-section-heading">
+                <p class="trip-eyebrow">About</p>
+                <h2>여행지 소개</h2>
+            </div>
             <article>
-                <figure>
-                    <figcaption>리장 공연</figcaption>
-                    <video width="400" height="200" controls>
-                        <source src="../media/video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </figure>
+                <p>
+                    이 페이지는 기억에 남은 여행지의 명소와 먹거리, 영상을 소개합니다.
+                    아래 콘텐츠는 원하는 여행지에 맞게 제목과 설명을 자유롭게 변경할 수 있습니다.
+                </p>
             </article>
         </section>
 
-    </div>
+        <section class="trip-section" id="attractions">
+            <div class="trip-section-heading">
+                <p class="trip-eyebrow">Attractions</p>
+                <h2>추천 명소</h2>
+                <p>카드에 마우스를 올리면 사진이 확대됩니다.</p>
+            </div>
 
+            <div class="trip-gallery">
+                <article class="trip-place-card">
+                    <figure>
+                        <div class="trip-image-frame">
+                            <img src="" alt="첫 번째 추천 명소의 대표 풍경">
+                        </div>
+                        <figcaption>
+                            <h3>첫 번째 명소</h3>
+                            <p>명소의 특징과 방문한 소감을 작성하세요.</p>
+                        </figcaption>
+                    </figure>
+                </article>
 
+                <article class="trip-place-card">
+                    <figure>
+                        <div class="trip-image-frame">
+                            <img src="" alt="두 번째 추천 명소의 대표 풍경">
+                        </div>
+                        <figcaption>
+                            <h3>두 번째 명소</h3>
+                            <p>추천 시간대와 볼거리를 간단히 소개하세요.</p>
+                        </figcaption>
+                    </figure>
+                </article>
 
+                <article class="trip-place-card">
+                    <figure>
+                        <div class="trip-image-frame">
+                            <img src="" alt="세 번째 추천 명소의 대표 풍경">
+                        </div>
+                        <figcaption>
+                            <h3>세 번째 명소</h3>
+                            <p>기억에 남았던 여행 포인트를 작성하세요.</p>
+                        </figcaption>
+                    </figure>
+                </article>
+            </div>
+        </section>
+
+        <section class="trip-section" id="food">
+            <div class="trip-section-heading">
+                <p class="trip-eyebrow">Local Food</p>
+                <h2>여행지 먹거리</h2>
+            </div>
+
+            <div class="trip-food-layout">
+                <article class="trip-food-article">
+                    <div class="trip-image-frame trip-food-image">
+                        <img src="" alt="여행지의 대표 음식">
+                    </div>
+                    <div>
+                        <h3>꼭 먹어봐야 할 대표 음식</h3>
+                        <p>
+                            여행지의 대표 음식 이름과 맛, 추천 식당 또는 주문 팁을 작성하세요.
+                            음식에 얽힌 여행 이야기를 더하면 풍성한 소개가 됩니다.
+                        </p>
+                    </div>
+                </article>
+
+                <aside class="trip-tip">
+                    <h3>여행 Tip</h3>
+                    <ul>
+                        <li>인기 식당은 방문 전에 영업시간을 확인하세요.</li>
+                        <li>현지 교통카드와 결제 수단을 미리 준비하세요.</li>
+                        <li>혼잡한 명소는 오전 시간대 방문을 추천합니다.</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section class="trip-section" id="video">
+            <div class="trip-section-heading">
+                <p class="trip-eyebrow">Travel Film</p>
+                <h2>여행 영상</h2>
+            </div>
+            <article class="trip-video-card">
+                <video controls poster="" preload="metadata">
+                    <source src="../media/video.mp4" type="video/mp4">
+                    사용 중인 브라우저가 비디오 재생을 지원하지 않습니다.
+                </video>
+                <div>
+                    <h3>영상으로 다시 보는 여행</h3>
+                    <p>여행 중 촬영한 영상과 기억에 남는 장면을 소개하세요.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="trip-footer">
+        <p>© 2026 Travel Log</p>
+        <a href="#top">↑ 맨 위로</a>
+    </footer>
 </body>
 </html>

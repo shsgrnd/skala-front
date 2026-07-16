@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인터랙티브 할 일 관리 앱</title>
+    <link rel="stylesheet" href="../css/todo.css">
+    <script type="module" src="../scripts/app.js"></script>
+</head>
+<body class="todo-page">
+    <main class="todo-app">
+        <header class="todo-header">
+            <div>
+                <p class="todo-eyebrow">My Daily Plan</p>
+                <h1>오늘의 할 일</h1>
+                <p id="today-date"></p>
+            </div>
+            <a href="index.html">홈으로</a>
+        </header>
+
+        <section class="quote-card" aria-labelledby="quote-title">
+            <h2 id="quote-title">오늘의 한마디</h2>
+            <blockquote id="daily-quote">문구를 불러오는 중입니다.</blockquote>
+        </section>
+
+        <section class="todo-panel" aria-labelledby="todo-title">
+            <h2 id="todo-title" class="sr-only">할 일 목록</h2>
+
+            <form class="todo-form" id="todo-form">
+                <label class="sr-only" for="todo-input">새 할 일</label>
+                <input
+                    id="todo-input"
+                    name="todo"
+                    type="text"
+                    maxlength="80"
+                    placeholder="할 일을 입력하세요"
+                    autocomplete="off"
+                >
+                <button type="submit">추가</button>
+            </form>
+            <p class="todo-error" id="todo-error" aria-live="polite"></p>
+
+            <div class="todo-toolbar">
+                <div class="todo-filters" role="group" aria-label="할 일 필터">
+                    <button class="active" type="button" data-filter="all" aria-pressed="true">전체</button>
+                    <button type="button" data-filter="active" aria-pressed="false">진행중</button>
+                    <button type="button" data-filter="completed" aria-pressed="false">완료</button>
+                </div>
+            </div>
+
+            <ul class="todo-list" id="todo-list"></ul>
+            <p class="todo-empty" id="todo-empty">등록된 할 일이 없습니다.</p>
+
+            <footer class="todo-summary">
+                <p>전체 <strong id="total-count">0</strong>개</p>
+                <p>완료 <strong id="completed-count">0</strong>개</p>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>

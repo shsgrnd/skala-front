@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUpResult</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <div class="container signup-page">
         <header class="section-divider fixed-header">
@@ -13,6 +14,19 @@
             <p>SKALA Front의 회원이 되신 걸 환영합니다</p>
         </header>
         
+        <div class="result-table-wrap">
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th>항목</th>
+                        <th>개인 정보</th>
+                    </tr>
+                </thead>
+                <tbody id="resultBody"></tbody>
+
+            </table>
+        </div>
+
         <div>
             <h3>안내 사항</h3>
             <ul>
@@ -30,6 +44,108 @@
             <a href="myHoliday.html">| 휴일 일정</a>
         </div>
     </div>
-    
+<script>
+    const params = new URLSearchParams(location.search);
+
+    const userId = params.get("userId");
+    const userEmail = params.get("userEmail");
+    const userName = params.get("userName");
+    const userBirth = params.get("userBirth");
+    const phoneNum = params.get("phoneNum");
+    const gender = params.get("gender");
+    const area = params.get("area");
+    const interest = params.getAll("interest");
+    const joinPath = params.get("joinPath");
+    const intro = params.get("intro");
+
+    const genderKor = {
+        male: "남성",
+        female: "여성",
+        none: "선택 안 함"
+    };
+
+    const areaKor = {
+        seoul: "서울",
+        gwangju: "광주",
+        daegu: "대구",
+        daejeon: "대전",
+        busan: "부산",
+        ulsan: "울산",
+        incheon: "인천"
+    };
+
+    const interestKor = {
+        frontend: "웹 프론트엔드(React, Vue)",
+        backend: "백엔드 & 데이터베이스",
+        devops: "클라우드 & 인프라",
+        AI: "AI",
+        fullstack: "풀스택"
+    };
+
+    const joinPathKor = {
+        search: "인터넷",
+        recommend: "지인 추천",
+        adv: "광고",
+        etc: "기타"
+    };
+
+    const genderValue = genderKor[gender] || "";
+    const areaValue = areaKor[area] || "";
+    const interestValue = interest
+        .map(value => interestKor[value] || value)
+        .join(", ");
+    const joinPathValue = joinPathKor[joinPath] || "";
+
+    const requiredFields = [
+        {label: "아이디", value: userId},
+        {label: "이름", value: userName},
+        {label: "이메일", value: userEmail}
+    ];
+
+    const optionalFields = [
+        {label: "생년월일", value: userBirth},
+        {label: "전화번호", value: phoneNum},
+        {label: "성별", value: genderValue},
+        {label: "지역", value: areaValue},
+        {label: "관심 분야", value: interestValue},
+        {label: "가입 경로", value: joinPathValue},
+        {label: "자기소개", value: intro}
+    ].filter(field => {
+        return field.value !== null && field.value.trim() !== "";
+    });
+
+    const resultBody = document.querySelector("#resultBody");
+
+    function addSection(title, fields) {
+        const titleRow = document.createElement("tr");
+        const titleCell = document.createElement("th");
+
+        titleCell.colSpan = 2;
+        titleCell.textContent = title;
+        titleRow.appendChild(titleCell);
+        resultBody.appendChild(titleRow);
+
+        fields.forEach(field => {
+            const row = document.createElement("tr");
+            const labelCell = document.createElement("th");
+            const valueCell = document.createElement("td");
+
+            labelCell.textContent = field.label;
+            valueCell.textContent = field.value;
+
+            row.append(labelCell, valueCell);
+            resultBody.appendChild(row);
+
+        });
+    }
+
+    addSection("필수 정보", requiredFields);
+    if (optionalFields.length > 0) {
+        addSection("추가 정보", optionalFields);
+    }
+
+
+</script>
 </body>
+
 </html>

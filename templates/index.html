@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome SKALA</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../scripts/upDown.js" defer></script>
+    <script src="../scripts/grade.js" defer></script>
+    <script src="../scripts/bag.js" defer></script>
+    <!-- <script src="../scripts/weather.js" defer></script> -->
+    <script type="module" src="../scripts/realtimeInfo.js"></script>
 </head>
 <body>
     <div class="container">
@@ -18,6 +23,8 @@
             <a href="myHoliday.html" target="_blank" rel="noopener noreferrer">휴일 일정</a>
             <a href="myClass.html" target="_blank" rel="noopener noreferrer">강의 시간표</a>
             <a href="myTrip.html" target="_blank" rel="noopener noreferrer">여행 일지</a>
+            <a href="productGallery.html" target="_blank" rel="noopener noreferrer">상품 갤러리</a>
+            <a href="todo.html" target="_blank" rel="noopener noreferrer">할 일 앱</a>
         </nav>
         <div class="section-divider index-layout">
             <main>
@@ -50,10 +57,36 @@
             <aside>
                 <h3>실시간 정보</h3>
                 <p>현재 위치 : 광주광역시 광산구</p>
+                <select class="weather-select" name="weather-select" aria-label="날씨를 확인할 도시 선택">
+                    <option value="" disabled selected>--선택--</option>
+                        <option value="seoul">서울</option>
+                        <option value="gwangju">광주</option>
+                        <option value="daegu">대구</option>
+                        <option value="daejeon">대전</option>
+                        <option value="busan">부산</option>
+                        <option value="ulsan">울산</option>
+                        <option value="incheon">인천</option>
+                </select>
+                <div id="weather-box"></div>
                 <section>
                     <p>추천 학습 사이트 : 
                         <a href="https://skala2.udemy.com/" target="_blank" rel="noopener noreferrer">https://skala2.udemy.com/</a>
                     </p>
+                </section>
+                <section>
+                    <input class="game-button" type="button" id="upDown" value="UP DOWN 게임">
+                </section>
+                <section>
+                    <input class="game-button" type="button" id="grade" value="성적 계산기">
+                </section>
+                <section>
+                    <input class="game-button" type="button" id="whatsInMyBag" value="내 가방 보기">
+                    <p id="bag-status">버튼을 눌러 가방을 확인하세요</p>
+                </section>
+                <section>
+                    <a class="game-button quiz-link" href="03_wrap_quiz.html">
+                        복습 퀴즈 풀기
+                    </a>
                 </section>
             </aside>
         </div>
@@ -62,7 +95,5 @@
             <p><small>© 2026 신형섭 포트폴리오. 모든 태그는 웹 표준 시맨틱 태그로 작성되었습니다.</small></p>
         </footer>
     </div>
-    
-
 </body>
 </html>

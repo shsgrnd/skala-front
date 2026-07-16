@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 상품 카드 갤러리</title>
+    <link rel="stylesheet" href="../css/products.css">
+    <script src="../scripts/productGallery.js" defer></script>
+</head>
+<body class="product-page">
+    <header class="product-topbar">
+        <a class="product-logo" href="productGallery.html">SKALA Shop</a>
+        <nav class="product-menu" aria-label="상품 페이지 메뉴">
+            <a href="#products">상품</a>
+            <a href="#benefits">혜택</a>
+            <a href="index.html">홈</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+            <span aria-hidden="true">🌙</span>
+            <span class="theme-label">다크 모드</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="product-hero">
+            <p class="product-eyebrow">New Collection</p>
+            <h1>일상에 즐거움을 더하는 아이템</h1>
+            <p>화면 크기에 따라 자연스럽게 재배치되는 반응형 상품 갤러리입니다.</p>
+            <a href="#products">상품 보러 가기</a>
+        </section>
+
+        <section class="product-section" id="products">
+            <div class="product-section-heading">
+                <div>
+                    <p class="product-eyebrow">Featured</p>
+                    <h2>추천 상품</h2>
+                </div>
+                <p>총 6개의 상품</p>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="" alt="무선 헤드폰 상품">
+                        <span class="product-badge">BEST</span>
+                    </div>
+                    <div class="product-card-body">
+                        <p class="product-category">Digital</p>
+                        <h3>무선 헤드폰</h3>
+                        <div class="product-price-row">
+                            <strong>129,000원</strong>
+                            <button type="button" aria-label="무선 헤드폰 장바구니 담기">담기</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="" alt="스마트 워치 상품">
+                        <span class="product-badge">NEW</span>
+                    </div>
+                    <div class="product-card-body">
+                        <p class="product-category">Digital</p>
+                        <h3>스마트 워치</h3>
+                        <div class="product-price-row">
+                            <strong>189,000원</strong>
+                            <button type="button" aria-label="스마트 워치 장바구니 담기">담기</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="" alt="데스크 조명 상품">
+                    </div>
+                    <div class="product-card-body">
+                        <p class="product-category">Living</p>
+                        <h3>데스크 조명</h3>
+                        <div class="product-price-row">
+                            <strong>49,000원</strong>
+                            <button type="button" aria-label="데스크 조명 장바구니 담기">담기</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="" alt="텀블러 상품">
+                    </div>
+                    <div class="product-card-body">
+                        <p class="product-category">Lifestyle</p>
+                        <h3>데일리 텀블러</h3>
+                        <div class="product-price-row">
+                            <strong>32,000원</strong>
+                            <button type="button" aria-label="데일리 텀블러 장바구니 담기">담기</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="" alt="백팩 상품">
+                    </div>
+                    <div class="product-card-body">
+                        <p class="product-category">Fashion</p>
+                        <h3>시티 백팩</h3>
+                        <div class="product-price-row">
+                            <strong>79,000원</strong>
+                            <button type="button" aria-label="시티 백팩 장바구니 담기">담기</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="" alt="키보드 상품">
+                    </div>
+                    <div class="product-card-body">
+                        <p class="product-category">Digital</p>
+                        <h3>미니 키보드</h3>
+                        <div class="product-price-row">
+                            <strong>99,000원</strong>
+                            <button type="button" aria-label="미니 키보드 장바구니 담기">담기</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="product-benefits" id="benefits">
+            <article>
+                <span aria-hidden="true">🚚</span>
+                <h2>빠른 배송</h2>
+                <p>결제 완료 후 빠르게 배송을 시작합니다.</p>
+            </article>
+            <article>
+                <span aria-hidden="true">🎁</span>
+                <h2>회원 혜택</h2>
+                <p>신규 회원에게 할인 쿠폰을 제공합니다.</p>
+            </article>
+            <article>
+                <span aria-hidden="true">💬</span>
+                <h2>고객 지원</h2>
+                <p>상품 관련 문의를 친절하게 안내합니다.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="product-footer">
+        <p>© 2026 SKALA Shop</p>
+    </footer>
+</body>
+</html>
