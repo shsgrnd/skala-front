@@ -8,7 +8,7 @@
     --trip-background: #f5f5f7;
     --trip-border: rgba(60, 60, 67, 0.16);
     --trip-shadow: 0 18px 45px rgba(0, 0, 0, 0.1);
-    --trip-hero-image: url("");
+    --trip-hero-image: url("../media/홋카이도.jpg");
 }
 
 * {
