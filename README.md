@@ -2,13 +2,14 @@
 
 ## 프로젝트 구조
 
-HTML, CSS, JavaScript 기초 실습과 종합 과제 결과물을 정리한 프론트엔드 프로젝트입니다. 별도의 빌드 도구 없이 `templates/` 폴더의 HTML 파일을 브라우저에서 실행하는 정적 웹 프로젝트 구조입니다.
+HTML, CSS, JavaScript 기초 실습과 종합 과제 결과물을 정리한 정적 프론트엔드 프로젝트입니다. 별도의 빌드 도구 없이 `templates/` 폴더의 HTML 파일을 브라우저에서 실행합니다.
 
 ```text
 skala-front/
 ├── README.md
+├── 종합실습가이드_HTML_CSS_JavaScript(김성영).pdf
 ├── css/
-│   ├── style.css          # 공통 페이지, 자기소개, 회원가입, 퀴즈 등 기본 스타일
+│   ├── style.css          # 공통 페이지, 회원가입, 결과 페이지, 퀴즈, 표 스타일
 │   ├── trip.css           # 여행지 소개 페이지 전용 스타일
 │   ├── products.css       # 반응형 상품 카드 갤러리 스타일
 │   └── todo.css           # 할 일 관리 앱 스타일
@@ -16,10 +17,16 @@ skala-front/
 │   ├── 리장.jpg
 │   ├── 세부.jpg
 │   ├── 홋카이도.jpg
+│   ├── headphone.jpg
+│   ├── keyboard.jpg
+│   ├── applewatch.jpg
+│   ├── bag.jpg
+│   ├── daily.jpg
+│   ├── desk-light.png
 │   ├── music.mp3
 │   └── video.mp4
 ├── scripts/
-│   ├── app.js             # 할 일 관리 앱 UI, 필터, 오늘의 한마디 처리
+│   ├── app.js             # 할 일 관리 앱 UI, 필터, 이벤트 위임, 오늘의 한마디 처리
 │   ├── storage.js         # 할 일 데이터 localStorage 저장/복원 모듈
 │   ├── productGallery.js  # 상품 갤러리 다크 모드 전환 및 테마 저장
 │   ├── quiz.js            # HTML/CSS/JavaScript 복습 퀴즈 로직
@@ -30,92 +37,57 @@ skala-front/
 │   ├── grade.js           # 과목 점수 평균 및 등급 계산
 │   └── bag.js             # 가방 속 물건 출력 이벤트 실습
 ├── templates/
-│   ├── index.html         # 메인 페이지 및 JavaScript 실습 진입점
-│   ├── 02_my_intro_page.html
-│   ├── 03_wrap_quiz.html
-│   ├── 04_signUp.html
-│   ├── signUpResult.html
-│   ├── myClass.html
-│   ├── myHoliday.html
-│   ├── myTrip.html
-│   ├── productGallery.html
-│   └── todo.html
+│   ├── index.html              # 메인 페이지 및 JavaScript 실습 진입점
+│   ├── 02_my_intro_page.html   # 자기소개 페이지
+│   ├── 03_wrap_quiz.html       # 복습 퀴즈 페이지
+│   ├── 04_signUp.html          # 회원가입 폼 페이지
+│   ├── signUpResult.html       # 회원가입 결과 출력 페이지
+│   ├── myClass.html            # 수업 시간표 페이지
+│   ├── myHoliday.html          # 휴일 일정 페이지
+│   ├── myTrip.html             # 여행지 소개 페이지
+│   ├── productGallery.html     # 반응형 상품 카드 갤러리 페이지
+│   └── todo.html               # 할 일 관리 앱 페이지
 └── result/
     ├── day1/
-    │   ├── assignments_image/             # Day 1 필수 과제 실행 결과
+    │   ├── assignments_image/             # Day 1 실습 과제 실행 결과
     │   ├── additional_assignments_image/  # Day 1 추가 과제 실행 결과
-    │   └── final_image/                   # Day 1 최종 보완 결과
+    │   └── final_image/                   # Day 1 종합 실습 과제 결과
     └── day2/
-        ├── assignments_image/             # Day 2 필수 과제 실행 결과
-        └── additional_assignments_image/  # Day 2 추가 과제 실행 결과
+        ├── assignments_image/             # Day 2 실습 과제 실행 결과
+        ├── additional_assignments_image/  # Day 2 추가 과제 실행 결과
+        └── final_image/                   # Day 2 종합 실습 과제 결과
 ```
 
 ### 주요 구성
 
-- `templates/`: 각 실습 페이지의 HTML 파일이 모여 있는 폴더입니다.
-- `css/`: 공통 스타일과 페이지별 전용 스타일을 분리해 둔 폴더입니다.
-- `scripts/`: DOM 이벤트, 모듈, API 요청, localStorage, 퀴즈, 게임 등 JavaScript 실습 코드가 들어 있습니다.
-- `media/`: 여행지 페이지와 멀티미디어 실습에 사용하는 이미지, 오디오, 비디오 파일이 들어 있습니다.
-- `result/`: Day 1, Day 2 과제별 실행 결과 스크린샷을 보관하는 폴더입니다.
+- `templates/`: 실습별 HTML 페이지를 보관합니다.
+- `css/`: 공통 스타일과 여행, 상품 갤러리, 할 일 앱 전용 스타일을 분리해 관리합니다.
+- `scripts/`: DOM 이벤트, 이벤트 위임, 모듈, API 요청, localStorage, 퀴즈, 게임 로직을 보관합니다.
+- `media/`: 여행지 이미지, 상품 이미지, 오디오, 비디오 파일을 보관합니다.
+- `result/`: Day 1, Day 2 과제별 실행 결과와 최종 보완 캡처 이미지를 보관합니다.
 
 
 ## REPORT
 
-### 1. 각 과제의 실행 결과물
-: result/
+### 1. 각 과제의 실행 결과물 (이미지)
+
+각 과제의 실행 결과 캡처 이미지는 `result/` 폴더에 Day별로 구분하여 저장했습니다.
+
+- Day 1 실습 과제 결과: `result/day1/assignments_image/`
+- Day 1 추가 과제 결과: `result/day1/additional_assignments_image/`
+- Day 1 종합 실습 결과: `result/day1/final_image/`
+- Day 2 실습 과제 결과: `result/day2/assignments_image/`
+- Day 2 추가 과제 결과: `result/day2/additional_assignments_image/`
+- Day 2 종합 실습 결과: `result/day2/final_image/`
 
 ### 2. 소스 코드
-: Github 및 구글 드라이브 업로드
+: 전체 소스 코드는 GitHub 저장소에 업로드했으며, 제출용 파일은 구글 드라이브에도 함께 업로드했습니다.
 
 ### 3. 결과물에 대한 평가 
-: 
+: 강의에서 배운 개념들을 이해하고 적용하기 위해 노력했으며, HTML 구조 작성, CSS 레이아웃과 반응형 처리, JavaScript 이벤트 처리 및 localStorage 활용을 전반적으로 구현해볼 수 있었습니다. 회원가입 폼 검증, 회원가입 결과 출력, 여행지 소개 페이지, 상품 카드 갤러리, 할 일 관리 앱 등 주요 요구사항을 반영했고, 실행 결과 캡처를 통해 기능이 정상적으로 동작하는지 확인했습니다.
+JavaScript 파트에서 생각과 다른 결과가 나올 때는 AI를 활용해 오류의 원인, 관련 개념, 해결 방법을 학습했습니다. CSS의 경우 전체적인 디자인 방향성을 AI에게 제시하고, 프로젝트에 맞게 색상, 간격, 배치 등 디테일한 부분은 직접 수정했습니다. 특히 동적으로 추가되는 할 일 항목은 부모 `ul`에 이벤트 리스너를 한 번만 등록하는 이벤트 위임 방식으로 처리해보았습니다. 아직 일부 디자인과 사용자 경험은 더 다듬고 싶지만, 수업에서 배운 내용을 실제 페이지 형태로 연결해보는 데 의미가 있었습니다.
 
 ### 4. 실습 과제 이후 추가 과제
-- 교재 속 실습 및 과제 모두 완료하고 캡쳐한 사진은 'result/day1/additional_assignments_image/'와 'result/day1/additional_assignments_image/'에 저장했습니다.
+- 교재 속 실습 및 추가 과제를 모두 완료했으며, 실행 결과 캡처 이미지는 `result/day1/additional_assignments_image/`와 `result/day2/additional_assignments_image/`에 저장했습니다.
 
 ### 5. Github 주소 : https://github.com/shsgrnd/skala-front
-
-## 추가로 해야 할 일
-
-### 여행지 소개 페이지
-
-- [x] `css/trip.css`의 `--trip-hero-image`에 히어로 배경 이미지 경로 입력
-- [x] `templates/myTrip.html`의 빈 `src=""`에 명소 이미지 3장 경로 입력
-- [x] 대표 음식 이미지 경로 입력
-- [x] `video`의 빈 `poster=""`에 영상 포스터 이미지 경로 입력
-- [x] 실제 여행지에 맞게 명소·음식 제목과 설명 수정
-- [x] 모든 이미지의 `alt`가 실제 이미지 내용을 설명하는지 확인
-
-권장 이미지 크기:
-
-- 히어로 배경: `1920 × 1080`
-- 명소 및 음식 이미지: `800 × 600`
-- 영상 포스터: `1280 × 720`
-
-### 상품 카드 갤러리
-
-- [ ] `templates/productGallery.html`의 상품 6개 빈 `src=""`에 이미지 경로 입력
-- [ ] 상품명·분류·가격을 원하는 데이터로 수정
-- [ ] 상품 이미지에 맞게 `alt` 내용 수정
-- [x] 화면 폭 `1200px → 800px → 500px`에서 `3열 → 2열 → 1열` 동작 확인
-- [ ] 다크 모드 전환 및 새로고침 후 테마 유지 확인
-
-권장 상품 이미지 크기: `800 × 800` 정사각형
-
-### 할 일 관리 앱
-
-- [x] Live Server 또는 `python3 -m http.server 5500`으로 실행
-- [x] 추가 버튼과 Enter 키로 할 일이 등록되는지 확인
-- [x] 완료 처리·삭제·전체/진행중/완료 필터 동작 확인
-- [x] 새로고침 후 할 일이 `localStorage`에서 복원되는지 확인
-- [x] 인터넷 연결 및 차단 환경에서 오늘의 한마디와 기본 문구가 각각 표시되는지 확인
-
-### 제출 전 최종 점검
-
-- [ ] 회원가입 폼의 빈 값·아이디 패턴·비밀번호 길이·전화번호 형식 검증
-- [ ] 회원가입 결과 페이지에서 관심 분야 복수 선택값 확인
-- [ ] 여행지 페이지 내비게이션의 앵커 이동과 고정 상태 확인
-- [ ] iPhone 크기와 Mac 데스크톱 크기에서 모든 페이지 레이아웃 확인
-- [ ] 브라우저 개발자 도구 Console에 오류가 없는지 확인
-- [ ] 종합실습 실행 결과 스크린샷을 `result/` 폴더에 저장
-- [ ] 변경 파일을 Git에 추가하고 커밋한 뒤 GitHub에 push

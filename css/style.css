@@ -161,6 +161,38 @@ a:hover {
     border-radius: 14px;
 }
 
+.signup-header {
+    margin-bottom: 0;
+    padding-bottom: 22px;
+}
+
+.signup-header h2 {
+    margin: 0 0 14px;
+}
+
+.signup-header p {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    color: #424245;
+}
+
+.result-header h1 {
+    margin: 0 0 10px;
+    padding: 0;
+    border: 0;
+    font-size: 34px;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.result-header p {
+    margin: 0;
+    color: #424245;
+}
+
 .signup-form legend {
     padding: 0 8px;
     color: #1d1d1f;
@@ -315,17 +347,22 @@ a:hover {
     top: 0;
     left: 0;
     right: 0;
-    width: 90%;
-    max-width: 960px;
+    width: calc(100% - 64px);
+    max-width: 1040px;
     margin: 0 auto;
     padding: 16px 32px;
     box-sizing: border-box;
     background-color: white;
     z-index: 1000;
+    border-radius: 0 0 24px 24px;
 }
 
 .signup-page {
     padding-top: 180px;
+}
+
+body.signup-page {
+    padding-top: 170px;
 }
 
 .index-layout {
@@ -825,6 +862,10 @@ a:hover {
     border-radius: 14px;
 }
 
+.signup-form input:required:not([type="checkbox"]):not([type="radio"]) {
+    border-color: #ff3b30;
+}
+
 .weather-select:focus,
 .signup-form input:focus,
 .signup-form select:focus,
@@ -997,7 +1038,7 @@ a:hover {
     }
 
     .fixed-header {
-        width: 100%;
+        width: calc(100% - 20px);
         padding: 12px 20px;
     }
 
@@ -1005,9 +1046,17 @@ a:hover {
         padding-top: 165px;
     }
 
+    body.signup-page {
+        padding-top: 145px;
+    }
+
     .signup-form fieldset,
     .quiz-card {
         padding: 20px;
+    }
+
+    .result-header h1 {
+        font-size: 26px;
     }
 
     .signup-form .btn-submit,
